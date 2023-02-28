@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PDR_Assign_To_And_Tech_PayoutValidation</fullName>
+    <active>true</active>
+    <description>If the PDR assign To is not blank then make the Tech payout field is mandatory and vice versa is also true.</description>
+    <errorConditionFormula>OR(
+AND(NOT(ISBLANK( PDR_Assigned_To__c )),
+
+ISBLANK(Tech_Payout_Manual__c )
+
+), 
+AND(NOT(ISBLANK(Tech_Payout_Manual__c )),
+ISBLANK(PDR_Assigned_To__c)
+)
+)</errorConditionFormula>
+    <errorMessage>Two Validations are going on
+1- PDR Assign To is Not Blank while generating the Tech Payout
+2-Without Assigning PDR Assign To you can not generate the Tech Payout</errorMessage>
+</ValidationRule>

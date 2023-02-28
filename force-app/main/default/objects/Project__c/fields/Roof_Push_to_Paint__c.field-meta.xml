@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Roof_Push_to_Paint__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Roof Push to Paint (Y/N)</description>
+    <externalId>false</externalId>
+    <label>Roof Push to Paint</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

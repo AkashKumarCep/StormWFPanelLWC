@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Loss_Amount__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(Repair_Status__c,&quot;Total Loss&quot;), ( Consulting_Fee__c +  TL_Admin_fee__c +  TL_Estimate_Fee__c + Storage_Fee__c  ), 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Loss Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

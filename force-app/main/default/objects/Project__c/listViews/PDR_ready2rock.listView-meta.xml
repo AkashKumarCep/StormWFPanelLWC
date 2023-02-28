@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PDR_ready2rock</fullName>
+    <booleanFilter>1 AND 2 AND (3 OR 4) AND (5 OR 6 OR 7)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Repair_Status__c</columns>
+    <columns>PDR_Assigned_To__c</columns>
+    <columns>PDR_Start_Date__c</columns>
+    <columns>PDR_Duration__c</columns>
+    <columns>Year_Make_Model__c</columns>
+    <columns>Vin_Number__c</columns>
+    <columns>Color__c</columns>
+    <columns>Tech_Payout_Manual__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>R_I_Down_End_Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>PDR_User_LoggedIn_Flag__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>PDR_Start_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>PDR_End_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>Austin</value>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>oklahoma</value>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>Bengaluru</value>
+    </filters>
+    <label>PDR READY - Assigned to Me</label>
+    <sharedTo>
+        <portalRole>ProductionTeam11UserCustomerUser</portalRole>
+        <portalRole>ProductionTeam2UserCustomerUser</portalRole>
+        <portalRole>ProductionTeam6UserCustomerUser</portalRole>
+        <portalRole>ProductionTeam7UserCustomerUser</portalRole>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Office_Team_Project</fullName>
+    <booleanFilter>(1 OR 2) AND (3 OR 4)</booleanFilter>
+    <columns>Action_Date__c</columns>
+    <columns>Action_Note__c</columns>
+    <columns>NAME</columns>
+    <columns>Total_Days_in_Shop__c</columns>
+    <columns>Account__c</columns>
+    <columns>Year_Make_Model__c</columns>
+    <columns>Insurance_Co__c</columns>
+    <columns>Claim_Number__c</columns>
+    <columns>Approved_Estimate_Difference__c</columns>
+    <columns>I_S_Sub_Status__c</columns>
+    <columns>Workflow_Status_Update__c</columns>
+    <columns>Current_Sub_Status__c</columns>
+    <columns>Need_to_order__c</columns>
+    <columns>Customer_Owed__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RO_Approval_Status__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>RO_Approval_Status__c</field>
+        <operation>equals</operation>
+        <value>Rejected</value>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>Austin</value>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>Norman</value>
+    </filters>
+    <label>My Office</label>
+    <sharedTo>
+        <role>Office</role>
+    </sharedTo>
+</ListView>

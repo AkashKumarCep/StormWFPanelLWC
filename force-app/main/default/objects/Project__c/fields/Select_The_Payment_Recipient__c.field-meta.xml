@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Select_The_Payment_Recipient__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>If StormSolutions &amp; Customer OR Customer &amp; Lien Holder, request the customer to bring the cheque while pickup or endorse the cheque correctly.</inlineHelpText>
+    <label>Select The Payment Recipient:</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>StormSolutions</fullName>
+                <default>false</default>
+                <label>Storm Solutions</label>
+            </value>
+            <value>
+                <fullName>StormSolutions &amp; Customer</fullName>
+                <default>false</default>
+                <label>StormSolutions &amp; Customer</label>
+            </value>
+            <value>
+                <fullName>Customer &amp; Lien Holder</fullName>
+                <default>false</default>
+                <label>Customer</label>
+            </value>
+            <value>
+                <fullName>--None--</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>--None--</label>
+            </value>
+            <value>
+                <fullName>MyStormSolutions</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MyStormSolutions</label>
+            </value>
+            <value>
+                <fullName>MyStormSolutions &amp; Customer</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MyStormSolutions &amp; Customer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

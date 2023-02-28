@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Days_Duration__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(R_I_Down_End_Date__c),(NOW() - R_I_Start_Date__c)*24,IF(ISBLANK(PDR_End_Date__c),(NOW() - PDR_Start_Date__c)*24,IF(ISBLANK(PDR_End_Date__c),(NOW() - PDR_Start_Date__c)*24,IF(ISBLANK(R_I_Up_End_Date__c),(NOW() - R_I_Up_Start_Date__c)*24,IF(ISBLANK(Parts_End_Date__c),(NOW() - Parts_Start_Date__c)*24,IF(ISBLANK(Details_End_Date__c),(NOW() - Detail_Start_Date__c)*24,IF(ISBLANK(QC_End_Date__c),(NOW() - QC_Start_Date__c)*24,NULL)))))))
+
+
+
+/*
+If(ISBLANK(R_I_Up_End_Date__c),floor((NOW() - R_I_Up_Start_Date__c)*24),IF(ISBLANK(R_I_Down_End_Date__c),floor((NOW() - R_I_Start_Date__c)*24),IF(ISBLANK(PDR_End_Date__c),floor((NOW() - PDR_Start_Date__c)*24),IF(ISBLANK(PDR_End_Date__c), floor((NOW() - PDR_Start_Date__c)*24),IF(ISBLANK(Parts_End_Date__c), floor((NOW() - Parts_Start_Date__c)*24),IF(ISBLANK(Details_End_Date__c),floor((NOW() - Detail_Start_Date__c)*24),IF(ISBLANK(QC_End_Date__c), floor((NOW() - QC_Start_Date__c)*24),NULL)))))))
+ +
+ If(ISBLANK(R_I_Up_End_Date__c),floor((((NOW() - R_I_Up_Start_Date__c)*24)*60)/100),IF(ISBLANK(R_I_Down_End_Date__c),floor((((NOW() - R_I_Start_Date__c)*24)*60)/100),IF(ISBLANK(PDR_End_Date__c),floor((((NOW() - PDR_Start_Date__c)*24)*60)/100),IF(ISBLANK(PDR_End_Date__c), floor((((NOW() - PDR_Start_Date__c)*24)*60)/100),IF(ISBLANK(Parts_End_Date__c), floor((((NOW() - Parts_Start_Date__c)*24)*60)/100),IF(ISBLANK(Details_End_Date__c),floor((((NOW() - Detail_Start_Date__c)*24)*60)/100),IF(ISBLANK(QC_End_Date__c), floor((((NOW() - QC_Start_Date__c)*24)*60)/100),NULL))))))) 
+
+*/
+
+
+/*
+IF (ISBLANK(R_I_Up_End_Date__c), TEXT(FLOOR((NOW() - R_I_Up_Start_Date__c)) ) &amp; &quot; Days &quot;,   IF (ISBLANK(R_I_Down_End_Date__c), TEXT(FLOOR((NOW() - R_I_Start_Date__c)) ) &amp; &quot; Days &quot;, &quot;&quot;) 
+&amp; IF(FLOOR(MOD((NOW() - R_I_Start_Date__c)* 24, 24 )) &gt; 0, TEXT(FLOOR(MOD((NOW() - R_I_Start_Date__c)* 24, 24 ))) &amp; &quot; Hours &quot;,&quot;&quot;) 
+&amp; TEXT(ROUND(MOD((NOW() - R_I_Start_Date__c)* 24 * 60, 60 ), 0)) &amp; &quot; Minutes &quot;
+&amp; TEXT(ROUND(MOD((NOW() - R_I_Start_Date__c)* 24 * 60*60, 60 ), 0)) &amp; &quot; Seconds&quot;
+  ) 
+&amp; IF(FLOOR(MOD((NOW() - R_I_Up_Start_Date__c)* 24, 24 )) &gt; 0, TEXT(FLOOR(MOD((NOW() - R_I_Up_Start_Date__c)* 24, 24 ))) &amp; &quot; Hours &quot;,&quot;&quot;) 
+&amp; TEXT(ROUND(MOD((NOW() - R_I_Up_Start_Date__c)* 24 * 60, 60 ), 0)) &amp; &quot; Minutes &quot;
+&amp; TEXT(ROUND(MOD((NOW() - R_I_Up_Start_Date__c)* 24 * 60*60, 60 ), 0)) &amp; &quot; Seconds&quot; 
+
+*/
+
+
+
+
+
+/*
+If(ISBLANK(R_I_Up_End_Date__c),(floor( (NOW() - R_I_Up_Start_Date__c)*24)),IF(ISBLANK(R_I_Down_End_Date__c),(floor( (NOW() - R_I_Start_Date__c)*24)),IF(ISBLANK(PDR_End_Date__c),(floor( (NOW() - PDR_Start_Date__c)*24)),IF(ISBLANK(PDR_End_Date__c), (floor( (NOW() - PDR_Start_Date__c)*24)),IF(ISBLANK(Parts_End_Date__c), (floor( (NOW() - Parts_Start_Date__c)*24)),IF(ISBLANK(Details_End_Date__c), (floor( (NOW() - Detail_Start_Date__c)*24)),IF(ISBLANK(QC_End_Date__c), (floor( (NOW() - QC_Start_Date__c)*24)),NULL)))))))
+
+*/</formula>
+    <label>Status Timer</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

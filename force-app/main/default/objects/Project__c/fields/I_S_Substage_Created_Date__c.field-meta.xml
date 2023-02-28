@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>I_S_Substage_Created_Date__c</fullName>
+    <defaultValue>NOW()</defaultValue>
+    <description>Created to capture I&amp;S latest substage</description>
+    <externalId>false</externalId>
+    <label>I&amp;S Substage Created Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estimate_Approval_Date_Week_Ending__c</fullName>
+    <description>Needed to Report Week Ending (Monday-Sunday) since Salesforce uses Sunday-Saturday.</description>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK( Estimate_Approval_Date__c ),NULL,CASE(MOD(Estimate_Approval_Date__c - DATE(1900, 1, 7), 7),
+
+
+0, Estimate_Approval_Date__c + 0,
+
+
+1, Estimate_Approval_Date__c + 6,
+
+
+2, Estimate_Approval_Date__c + 5,
+
+
+3, Estimate_Approval_Date__c + 4,
+
+
+4, Estimate_Approval_Date__c + 3,
+
+
+5, Estimate_Approval_Date__c + 2,
+
+
+6, Estimate_Approval_Date__c + 1,
+
+
+TODAY()))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Needed to Report Week Ending (Monday-Sunday) since Salesforce uses Sunday-Saturday.</inlineHelpText>
+    <label>Estimate Approval Date-Week Ending</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

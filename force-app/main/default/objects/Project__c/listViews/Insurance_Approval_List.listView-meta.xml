@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Insurance_Approval_List</fullName>
+    <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+    <columns>Action_Date__c</columns>
+    <columns>Action_Note__c</columns>
+    <columns>Approved_Estimate_Difference__c</columns>
+    <columns>NAME</columns>
+    <columns>Insurance__c</columns>
+    <columns>Claim_Number__c</columns>
+    <columns>I_S_Sub_Status__c</columns>
+    <columns>Total_Days_in_Shop__c</columns>
+    <columns>Account__c</columns>
+    <columns>Year_Make_Model__c</columns>
+    <columns>Estimate_and_Supp_Files_URL_Formula__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Insurance_Supplements_Status__c</field>
+        <operation>equals</operation>
+        <value>Prelim Received from G&amp;G,Estimate Sent to Ins,Awaiting Ins Approval,Need additional photos,Supp Info Sent to G&amp;G,Supp Received from G&amp;G,Supp Submitted to Insurance,Awaiting Supp Ins Approval,Payment Verification</value>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>Austin</value>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>Norman</value>
+    </filters>
+    <label>Waiting on Insurance Approval</label>
+    <sharedTo>
+        <group>Management</group>
+        <group>Office_Team</group>
+        <group>Office_and_Claims_Assistant</group>
+        <group>Shop_Manager</group>
+    </sharedTo>
+</ListView>

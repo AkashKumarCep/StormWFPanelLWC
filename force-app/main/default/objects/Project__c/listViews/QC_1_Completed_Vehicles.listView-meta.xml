@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QC_1_Completed_Vehicles</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND (4 OR 5 OR 6)</booleanFilter>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>QC_User_LoggedIn_Flag__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>QC_1_Start_Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>QC_1_End_Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>oklahoma</value>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>Austin</value>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>Bengaluru</value>
+    </filters>
+    <label>QC #1 : Completed Vehicles</label>
+    <sharedTo>
+        <portalRole>ProductionTeam5UserCustomerUser</portalRole>
+    </sharedTo>
+</ListView>

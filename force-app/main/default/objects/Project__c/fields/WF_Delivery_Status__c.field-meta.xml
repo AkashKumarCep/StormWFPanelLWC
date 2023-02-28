@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WF_Delivery_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Delivery Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Vehicle not ready to release</fullName>
+                <default>false</default>
+                <label>Vehicle not ready to release</label>
+            </value>
+            <value>
+                <fullName>Vehicle ready to release</fullName>
+                <default>false</default>
+                <label>Vehicle ready to release</label>
+            </value>
+            <value>
+                <fullName>Vehicle picked up</fullName>
+                <default>false</default>
+                <label>Vehicle picked up</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

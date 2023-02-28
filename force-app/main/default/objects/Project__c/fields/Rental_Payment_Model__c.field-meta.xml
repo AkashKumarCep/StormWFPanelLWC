@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rental_Payment_Model__c</fullName>
+    <description>Created for TRACKING RENTAL REIMBURSEMENT(SS-T825)</description>
+    <externalId>false</externalId>
+    <label>Rental Payment Model</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>paid to customer</fullName>
+                <default>false</default>
+                <label>paid to customer</label>
+            </value>
+            <value>
+                <fullName>paid to rental</fullName>
+                <default>false</default>
+                <label>paid to rental</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROs_Under_P_L_Approval_Queue</fullName>
+    <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Year_Make_Model__c</columns>
+    <columns>Total_Revenue__c</columns>
+    <columns>Total_Expenses__c</columns>
+    <columns>Income_After_Expenses__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RO_Approval_Status__c</field>
+        <operation>equals</operation>
+        <value>Submitted</value>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>Austin</value>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>Norman</value>
+    </filters>
+    <label>P&amp;L Approval</label>
+    <sharedTo>
+        <role>Admin</role>
+        <role>Office</role>
+    </sharedTo>
+</ListView>

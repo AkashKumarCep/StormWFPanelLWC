@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VP_Operations_Assigned_To__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lookup to user object</description>
+    <externalId>false</externalId>
+    <label>VP Operations Assigned To</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Projects_VPOperations</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

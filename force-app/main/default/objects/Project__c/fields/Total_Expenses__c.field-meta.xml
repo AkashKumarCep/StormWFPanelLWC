@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Expenses__c</fullName>
+    <externalId>false</externalId>
+    <formula>Deductible_Rebate__c+Estimate_Writing__c+Body_Shop__c+Referral_Payout__c +Miscellaneous__c+Office_Admin_Pay__c+Details_Cost__c+Intake_Cost__c+Shop_Fee__c+R_I_Cost__c+Total_Parts_Cost__c+Parts_Cost__c+Repair_With_A_Purpose__c+Customer_Discount__c +Final_Amount_Paid_by_SS_for_Rental__c+Tech_Payout__c+Sales_Pay__c+Marketting_Pay__c+ Team_Leader_Override__c+Recruiter_Override__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Expenses</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

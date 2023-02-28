@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Workflow_Status_Text__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( INCLUDES ( Workflow_Status__c , &apos;Intake_Started&apos; ), &apos;Intake Started; &apos;,null ) &amp;
+IF ( INCLUDES ( Workflow_Status__c , &apos;Intake_Completed&apos; ), &apos;Intake Completed; &apos;,null ) &amp;
+IF ( INCLUDES ( Workflow_Status__c , &apos;Scope_Started&apos; ), &apos;Scope Started; &apos;,null ) &amp;
+IF ( INCLUDES ( Workflow_Status__c , &apos;Scope_Completed&apos; ), &apos;Scope Completed; &apos;,null ) &amp;
+IF ( INCLUDES ( Workflow_Status__c , &apos;Order_Started&apos; ), &apos;Order Started; &apos;,null )&amp;
+IF ( INCLUDES ( Workflow_Status__c , &apos;Order_Completed&apos; ), &apos;Order Completed; &apos;,null ) &amp;
+IF ( INCLUDES ( Workflow_Status__c , &apos;Insurance_Started&apos; ), &apos;Insurance Started; &apos;,null ) &amp;
+IF ( INCLUDES ( Workflow_Status__c , &apos;Insurance_Completed&apos; ), &apos;Insurance Completed; &apos;,null ) &amp;
+IF ( INCLUDES ( Workflow_Status__c , &apos;Production_Started&apos; ), &apos;Production Started; &apos;,null ) &amp;
+IF ( INCLUDES ( Workflow_Status__c , &apos;Production_Completed&apos; ), &apos;Production Completed; &apos;,null )&amp;
+IF ( INCLUDES ( Workflow_Status__c , &apos;Delivery_Started&apos; ), &apos;Delivery Started; &apos;,null ) &amp;
+IF ( INCLUDES ( Workflow_Status__c , &apos;Delivery_Completed&apos; ), &apos;Delivery Completed; &apos;,null )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Workflow Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

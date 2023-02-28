@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Are_All_The_Payments_With_Office__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL( Repair_Status__c , &quot;Full Repair&quot;)  ||  ISPICKVAL( Repair_Status__c , &quot;Partial Repair&quot;)  , 
+IF( Approved_Estimate__c &lt;=0,1, IF(  Approved_Estimate_Payment_With_Office__c  ,1,0))+
+IF( X1st_Supplement__c &lt;=0,1, IF( Supp_1_Payment_With_Office__c ,1,0))+
+IF( X2nd_Supplement__c &lt;=0,1, IF( Supp_2_Payment_With_Office__c ,1,0))+
+IF( X3rd_Supplement__c &lt;=0,1, IF( Supp_3_Payment_With_Office__c ,1,0))+
+IF( Total_Cash__c &lt;=0,1, IF(  Customer_Owed_Payment_With_Office__c  ,1,0)),0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Are All The Payments With Office?</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

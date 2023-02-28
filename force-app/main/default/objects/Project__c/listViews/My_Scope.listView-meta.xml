@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Scope</fullName>
+    <booleanFilter>(1 AND 2) AND (3 OR 4)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Total_Days_in_Shop__c</columns>
+    <columns>Year_Make_Model__c</columns>
+    <columns>Insurance_Co__c</columns>
+    <columns>Has_Initial_Estimate_First_Look__c</columns>
+    <columns>Initial_Estimate__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Workflow_Status_Update__c</field>
+        <operation>contains</operation>
+        <value>Intake-Completed</value>
+    </filters>
+    <filters>
+        <field>Scope_User_LoggedIn_Flag__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>Austin</value>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>Norman</value>
+    </filters>
+    <label>Scopes To Do</label>
+    <sharedTo>
+        <role>Scope</role>
+    </sharedTo>
+</ListView>

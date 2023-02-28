@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Intake_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Intake Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Keys Inhand</fullName>
+                <default>false</default>
+                <label>Keys Inhand</label>
+            </value>
+            <value>
+                <fullName>Hanger and Keys Tagged</fullName>
+                <default>false</default>
+                <label>Hanger and Keys Tagged</label>
+            </value>
+            <value>
+                <fullName>VIN Added</fullName>
+                <default>false</default>
+                <label>VIN Added</label>
+            </value>
+            <value>
+                <fullName>Prior Damage Photos in G Drive</fullName>
+                <default>false</default>
+                <label>Prior Damage Photos in G Drive</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

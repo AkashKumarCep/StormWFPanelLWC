@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Scope_sent_to_G_G_completed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checkbox backend used</description>
+    <externalId>false</externalId>
+    <label>Scope sent to G&amp;G completed ?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

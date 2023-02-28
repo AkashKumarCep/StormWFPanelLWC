@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mode_of_contact_with_Insurance__c</fullName>
+    <externalId>false</externalId>
+    <label>Mode of contact with Insurance</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Online Portal</fullName>
+                <default>false</default>
+                <label>Online Portal</label>
+            </value>
+            <value>
+                <fullName>Adjuster(In person)</fullName>
+                <default>false</default>
+                <label>Adjuster(In person)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

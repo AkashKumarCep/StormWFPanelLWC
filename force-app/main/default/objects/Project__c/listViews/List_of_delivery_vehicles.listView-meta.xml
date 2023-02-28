@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>List_of_delivery_vehicles</fullName>
+    <booleanFilter>(1 AND 4) AND (2 OR 3)</booleanFilter>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Workflow_Status__c</field>
+        <operation>includes</operation>
+        <value>Intake_Completed,Scope_Completed,Insurance &amp; Supplements_Started,Insurance &amp; Supplements_Completed,Production_Started,Production_Completed,Delivery_Started</value>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>Austin</value>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>Norman</value>
+    </filters>
+    <filters>
+        <field>Delivery_Status__c</field>
+        <operation>equals</operation>
+        <value>Payment Verification,Customer Contacted</value>
+    </filters>
+    <label>List of vehicles in delivery stage</label>
+    <sharedTo>
+        <group>Management</group>
+        <group>Office_Team</group>
+    </sharedTo>
+</ListView>

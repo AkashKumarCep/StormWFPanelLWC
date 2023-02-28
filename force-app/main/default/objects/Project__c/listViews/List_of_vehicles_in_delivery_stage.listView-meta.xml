@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>List_of_vehicles_in_delivery_stage</fullName>
+    <booleanFilter>1 OR 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Year_Make_Model__c</columns>
+    <columns>Return_Method__c</columns>
+    <columns>Vehicle_Return_Delivery_Location__c</columns>
+    <columns>At_Shop_Pickup_Delivery_Date_Time__c</columns>
+    <columns>Account__c</columns>
+    <columns>Current_Sub_Status__c</columns>
+    <columns>WF_Delivery_Status__c</columns>
+    <columns>Delivery_Status__c</columns>
+    <columns>CaptureLatest_Sms_call_created_dateTime__c</columns>
+    <columns>CaptureLatest_Sms_call_type__c</columns>
+    <columns>Action_Date__c</columns>
+    <columns>Action_Note__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>At_Shop_Pickup_Delivery_Date_Time__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Current_Sub_Status__c</field>
+        <operation>contains</operation>
+        <value>Vehicle Returned - In Progress</value>
+    </filters>
+    <label>Ready To Deliver</label>
+    <sharedTo>
+        <group>Office_Team</group>
+        <role>Admin</role>
+    </sharedTo>
+</ListView>

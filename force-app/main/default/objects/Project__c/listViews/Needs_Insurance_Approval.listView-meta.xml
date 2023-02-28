@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Needs_Insurance_Approval</fullName>
+    <booleanFilter>1 AND 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Total_Days_in_Shop__c</columns>
+    <columns>Account__c</columns>
+    <columns>Year_Make_Model__c</columns>
+    <columns>Workflow_Status_Update__c</columns>
+    <columns>Current_Sub_Status__c</columns>
+    <columns>Duration__c</columns>
+    <columns>Duration_I_S__c</columns>
+    <columns>I_S_Sub_Status__c</columns>
+    <columns>WF_Production_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Insurance_Supplements_Status__c</field>
+        <operation>includes</operation>
+        <value>Prelim Received from G&amp;G,Estimate Sent to Ins,Awaiting Ins Approval,Need additional photos,Supp Info Sent to G&amp;G,Supp Received from G&amp;G,Supp Submitted to Insurance,Awaiting Supp Ins Approval,Management Approval,Payment Verification</value>
+    </filters>
+    <filters>
+        <field>Insurance_Supplements_Status__c</field>
+        <operation>excludes</operation>
+        <value>Approved,Total Loss</value>
+    </filters>
+    <label>Needs Insurance Approval</label>
+    <sharedTo>
+        <group>Office_Team</group>
+        <role>Admin</role>
+    </sharedTo>
+</ListView>

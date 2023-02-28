@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>List_view_of_completed_vehicles</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND ( 6 OR 7)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Year_Make_Model__c</columns>
+    <columns>Vin_Number__c</columns>
+    <columns>R_I_Cost__c</columns>
+    <columns>Quickbook_Updation_Completed__c</columns>
+    <columns>R_I_Down_End_Date__c</columns>
+    <columns>R_I_Up_End_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>R_I_Down_User_Loggedin_Flag__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>R_I_Start_Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>R_I_Down_End_Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>R_I_Up_Start_Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>R_I_Up_End_Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>Austin</value>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>Norman</value>
+    </filters>
+    <label>Completed Vehicles</label>
+    <sharedTo>
+        <portalRole>ProductionTeam1UserCustomerUser</portalRole>
+    </sharedTo>
+</ListView>

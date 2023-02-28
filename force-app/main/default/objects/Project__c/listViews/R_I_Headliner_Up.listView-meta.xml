@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>R_I_Headliner_Up</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND (5 OR 6 OR 7)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Production_Status__c</columns>
+    <columns>Repair_Status__c</columns>
+    <columns>Year_Make_Model__c</columns>
+    <columns>Total_Days_in_Shop__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>R_I_Up_User_LoggedIn_Flag__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Repair_Status__c</field>
+        <operation>equals</operation>
+        <value>Full Repair,Partial Repair</value>
+    </filters>
+    <filters>
+        <field>R_I_Up_End_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>PDR_End_Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>Austin</value>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>oklahoma</value>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>Bengaluru</value>
+    </filters>
+    <label>R&amp;I Headliner Up</label>
+    <sharedTo>
+        <group>Production_Team</group>
+    </sharedTo>
+</ListView>

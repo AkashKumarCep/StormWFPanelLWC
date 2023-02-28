@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pending_Parts_Installation</fullName>
+    <booleanFilter>(1 AND 2) AND ( 3 OR 4) AND (5 OR 6 OR 7)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Year_Make_Model__c</columns>
+    <columns>Vin_Number__c</columns>
+    <columns>Color__c</columns>
+    <columns>Total_Parts_Cost__c</columns>
+    <columns>Need_to_order__c</columns>
+    <columns>Parts_Assigned_To__c</columns>
+    <columns>Parts_Start_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>R_I_Up_End_Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Parts_User_LoggedIn_Flag__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Parts_Start_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Parts_End_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>Austin</value>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>oklahoma</value>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>Bengaluru</value>
+    </filters>
+    <label>Parts Installation Pending</label>
+    <sharedTo>
+        <portalRole>ProductionTeam3UserCustomerUser</portalRole>
+    </sharedTo>
+</ListView>

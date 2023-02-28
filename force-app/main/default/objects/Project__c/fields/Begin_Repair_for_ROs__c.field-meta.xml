@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Begin_Repair_for_ROs__c</fullName>
+    <externalId>false</externalId>
+    <formula>Hatch_Begin_Repair__c  ||  Hood_Begin_Repair__c ||  Left_Fender_Begin_Repair__c || Left_Front_Begin_Repair__c || Left_Quarter_Begin_Repair__c || Left_Rail_Begin_Repair__c || Left_Rear_Begin_Repair__c || Right_Fender_Begin_Repair__c || Right_Front_Begin_Repair__c || Right_Quarter_Begin_Repair__c || Right_Rail_Begin_Repair__c || Right_Rear_Begin_Repair__c || Roof_Begin_Repair__c || Windshield_Begin_Repair__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Begin Repair for ROs</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

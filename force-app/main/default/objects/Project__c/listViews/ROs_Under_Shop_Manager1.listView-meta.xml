@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROs_Under_Shop_Manager1</fullName>
+    <booleanFilter>(1 OR 2) AND 3 AND 4</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Year_Make_Model__c</columns>
+    <columns>Account__c</columns>
+    <columns>Repair_Status__c</columns>
+    <columns>Need_to_order__c</columns>
+    <columns>Production_Status__c</columns>
+    <columns>Days_Duration__c</columns>
+    <columns>PDR_Assigned_To__c</columns>
+    <columns>Tech_Payout_Manual__c</columns>
+    <columns>Total_Amount_Receivable__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Production_Status__c</field>
+        <operation>includes</operation>
+        <value>Headliner Down,PDR ready2rock,Quality Check #1,Headliner Up,Body Shop,Parts Installed,Detail,Quality Check #2</value>
+    </filters>
+    <filters>
+        <field>Repair_Status__c</field>
+        <operation>equals</operation>
+        <value>Full Repair,Partial Repair</value>
+    </filters>
+    <filters>
+        <field>Storm_Active_City_Flag__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Production_Status__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>ALL VEHICLES IN PROD - APPROVED</label>
+    <sharedTo>
+        <role>Office</role>
+        <role>Shop_Manager</role>
+    </sharedTo>
+</ListView>

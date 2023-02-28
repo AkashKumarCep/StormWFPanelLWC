@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Insurance__c</columns>
+    <columns>Year_Make_Model__c</columns>
+    <columns>Workflow_Status_Update__c</columns>
+    <columns>Total_Revenue__c</columns>
+    <columns>Repair_Status__c</columns>
+    <columns>Vehicle_Status__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>Storm_Active_City__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+    <sharedTo>
+        <group>Marketer</group>
+        <role>Admin</role>
+        <role>Marketer_1</role>
+        <role>Sales_Representatives_1</role>
+    </sharedTo>
+</ListView>

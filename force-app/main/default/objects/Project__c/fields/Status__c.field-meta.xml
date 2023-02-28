@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sent</fullName>
+                <default>false</default>
+                <label>Sent</label>
+            </value>
+            <value>
+                <fullName>Supplement</fullName>
+                <default>false</default>
+                <label>Supplement</label>
+            </value>
+            <value>
+                <fullName>Mgmt Review Needed</fullName>
+                <default>false</default>
+                <label>Mgmt Review Needed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

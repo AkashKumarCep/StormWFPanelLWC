@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Supplement_Required</fullName>
+    <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Windshield_Supplement_Required__c</columns>
+    <columns>Roof_Supplement_Required__c</columns>
+    <columns>Left_Fender_Supplement_Required__c</columns>
+    <columns>Right_Fender_Supplement_Required__c</columns>
+    <columns>Left_Front_Supplement_Required__c</columns>
+    <columns>Right_Front_Supplement_Required__c</columns>
+    <columns>Left_Rear_Supplement_Required__c</columns>
+    <columns>Left_Quarter_Supplement_Required__c</columns>
+    <columns>Right_Quarter_Supplement_Required__c</columns>
+    <columns>Hood_Supplement_Required__c</columns>
+    <columns>Hatch_Supplement_Required__c</columns>
+    <columns>Left_Rail_Supplement_Required__c</columns>
+    <columns>Right_Rail_Supplement_Required__c</columns>
+    <columns>Right_Rear_Supplement_Required__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Supplement_Required__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>Austin</value>
+    </filters>
+    <filters>
+        <field>Storm_Active_City__c</field>
+        <operation>equals</operation>
+        <value>Norman</value>
+    </filters>
+    <label>SUPP Photos Needed (If checked)</label>
+    <sharedTo>
+        <role>Scope</role>
+    </sharedTo>
+</ListView>

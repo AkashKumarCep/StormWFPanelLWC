@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Right_Cab_Max_Out_Conventional_c__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>21/06/21 Indu Added for Scope Form Requirement</description>
+    <externalId>false</externalId>
+    <label>Max Out/Conventional</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

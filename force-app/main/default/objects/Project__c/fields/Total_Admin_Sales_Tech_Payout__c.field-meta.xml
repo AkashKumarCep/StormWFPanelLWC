@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Admin_Sales_Tech_Payout__c</fullName>
+    <externalId>false</externalId>
+    <formula>Income_After_Expenses__c  - (  Admin_Payout__c  +  Shop_Manager_Pay__c  +  Justin_Pay__c +  Donzel_Pay__c  )</formula>
+    <label>Net Profit</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

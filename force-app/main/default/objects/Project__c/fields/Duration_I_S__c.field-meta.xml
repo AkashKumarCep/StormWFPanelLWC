@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Duration_I_S__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+	ISBLANK(I_S_Substage_Created_Date__c),
+	&quot;00:00&quot;,
+	IF(FLOOR((NOW() - I_S_Substage_Created_Date__c) * 24)&lt;9,&quot;0&quot; &amp; TEXT(FLOOR((NOW() - I_S_Substage_Created_Date__c) * 24)),TEXT(FLOOR((NOW() - I_S_Substage_Created_Date__c) * 24)))
+	&amp;&quot;:&quot;&amp;
+	IF((FLOOR(((NOW() - I_S_Substage_Created_Date__c) * 24 - FLOOR((NOW() - I_S_Substage_Created_Date__c) * 24))* 60))&lt;=9,&quot;0&quot;&amp;Text(FLOOR(((NOW() - I_S_Substage_Created_Date__c) * 24 - FLOOR((NOW() - I_S_Substage_Created_Date__c) * 24))* 60)),Text(FLOOR(((NOW() - I_S_Substage_Created_Date__c) * 24 - FLOOR((NOW() - I_S_Substage_Created_Date__c) * 24))* 60)))
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Duration I&amp;S</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
