@@ -1,0 +1,40 @@
+<template>
+   
+    <table width="100%" key={substage}>
+        <tr>
+            <td style="width: 10%;padding-right:5px;cursor: pointer;"><lightning-progress-ring value={workCompleted} variant="base-autocomplete" style="padding-left:10px" onclick={handleClick} name={subStageLabel}></lightning-progress-ring></td>
+            <template if:true={openFlow}>
+            <td style="width: 40%;padding-right:2px">
+            <b>{subStageLabel}</b>
+            </td>
+            </template>
+            <template if:false={openFlow}>
+                <td style="width: 40%;padding-right:2px">
+                {subStageLabel}
+                </td>
+                </template>
+            <td style="width: 35%;padding-right:2px">
+                 <lightning-combobox
+                    name="progress"
+                    value={subStageValue}
+                    options={picklistoptions}
+                   placeholder="Not started"
+                   variant="label-hidden"
+                   onchange={handleChange}
+                   >
+                </lightning-combobox> 
+            </td>
+            <td style="width: 20%;padding-left:4px">
+            
+                <p style="border-radius:5px;padding:3px;height:24px;width:100%;background-color:#12A1BB;text-align:center;color:white">{subStageTimeSpent}</p>
+            
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+</template>

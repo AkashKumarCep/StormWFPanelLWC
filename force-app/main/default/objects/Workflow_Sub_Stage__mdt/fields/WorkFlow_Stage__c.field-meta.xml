@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WorkFlow_Stage__c</fullName>
+    <description>Related field to Workflow Stage</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Related field to Workflow Stage</inlineHelpText>
+    <label>WorkFlow Stage</label>
+    <referenceTo>WorkFlow_Stage__mdt</referenceTo>
+    <relationshipLabel>Workflow Sub Stages</relationshipLabel>
+    <relationshipName>Workflow_Sub_Stages</relationshipName>
+    <required>false</required>
+    <type>MetadataRelationship</type>
+    <unique>false</unique>
+</CustomField>

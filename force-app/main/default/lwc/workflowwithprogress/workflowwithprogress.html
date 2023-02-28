@@ -1,0 +1,29 @@
+<template>
+		<lightning-card title="Workflow" icon-name="standard:account">
+				<div class="slds-clearfix" style="padding-right:10px">
+						<div class="slds-float_right">
+								<lightning-button-icon icon-name="utility:refresh"  onclick={handleRefresh}  alternative-text="Refresh" title="Refresh"></lightning-button-icon>
+						</div>
+				</div>
+				
+				<div style="padding-left:0px" class="slds-m-top_medium slds-m-bottom_x-large">
+						<div style="padding:10px">
+								<table>
+										<tbody><tr>
+												<td style="width:50%;padding-left:10%"><b>Stage</b>
+												</td><td style="width:45%;text-align:center"><b>Status</b></td>
+												<td style="width:25%;text-align:center"><b>Time Tracker</b></td>
+												</tr>
+										</tbody>
+								</table>
+						</div>
+						<template for:each={dataItems} for:item='item'>
+								
+								<c-workflowwithprogressclient key={item} stages={item} recid={recordId} onrowstatuschangetoparent={handleDatafromClient} workflowsubstageactions={workflowSubStageActionsData} ></c-workflowwithprogressclient>
+						</template>
+
+
+				</div>    
+		</lightning-card>
+
+</template>

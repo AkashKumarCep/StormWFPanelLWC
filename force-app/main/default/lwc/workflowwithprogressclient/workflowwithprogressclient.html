@@ -1,0 +1,64 @@
+<template>
+    
+    <div class="slds-p-left_small slds-p-rigth_small lgc-bg">
+    
+        <lightning-vertical-navigation selected-item={selectedItem}>
+            <!--
+            <lightning-vertical-navigation-section label="Navigation">
+            -->
+                <table>
+                    <tr>
+                    <td style="width:10%">
+                        <lightning-button-icon icon-name="utility:chevronright"  alternative-text="Settings" title="Settings" onclick={handleSelect}></lightning-button-icon>
+                        
+                     </td>
+                     <td style="width:40%">
+                        {stages.stage}
+                     </td>
+                      <td style="width:35%;padding-left:7px;padding-right:7px;padding-top:5px">
+                        <template if:true={stages.isCompleted}>
+                            <p style="border-radius:15px;padding:3px;height:24px;background-color: green;text-align:center;color:white">{stages.overallstatus}</p>    
+                        </template>
+                        <template if:true={stages.isNotStarted}>
+                            <p style="border-radius:15px;padding:3px;height:24px;background-color:slategray;text-align:center;color:white">{stages.overallstatus}</p>    
+                        </template>
+                        <template if:false={stages.isNotStarted}>
+                            <template if:false={stages.isCompleted}>
+                                <p style="border-radius:15px;padding:3px;height:24px;background-color:orange;text-align:center;color:white">{stages.overallstatus}</p>    
+                            </template>
+                        </template>
+                        <br>
+                      </td>
+                      <td style="width: 20%;padding-left:4px;padding-top:5px">
+            
+                        <p style="border-radius:5px;padding:3px;height:24px;width:100%;background-color:#12A1BB;text-align:center;color:white">{stages.timeSpent}</p>
+                        <br/>
+                    </td>
+                    </tr>
+                    
+                </table>
+                
+
+                <div style="display:none" class="stageprogress">
+                
+                    <template for:each={stages.subStages} for:item='subStage'>
+
+
+                        <c-workflowwithprogressclientrow key={subStage} stage={stages.stage} substage={subStage} picklistoptions={options} rid={recid} onrowstatuschange={handleStatusChangeClient} workflowsubstageactionsdatafromparent={workflowsubstageactions} ></c-workflowwithprogressclientrow>
+
+                        
+                    </template>
+                </div>     
+               
+
+            <!--
+            </lightning-vertical-navigation-section>
+            -->   
+        </lightning-vertical-navigation>
+
+
+    
+    </div>
+   
+
+</template>
