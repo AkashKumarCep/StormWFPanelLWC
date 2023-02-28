@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+	
+     <aura:handler event="force:refreshView" action="{! c.refreshWorkFlow}" />
+    
+    <c:workflowwithprogress recordId="{!v.recordId}" onrecordChange="{!c.refreshView}" aura:id="workFlow" />
+    
+    
+</aura:component>
